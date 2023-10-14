@@ -11,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class SchedulerConfig {
 
-	@Scheduled(fixedRate = 2000L) 
+	@Scheduled(cron = "*/2 * * * * *")  
 	public void job() throws InterruptedException {
 		log.info("Current Job Time -->> {}", new Date());
 		Thread.sleep(1000L);
